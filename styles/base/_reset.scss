@@ -1,15 +1,22 @@
+/*# sourceMappingURL=styles.css.map */
+@import '../constants/typography';
+
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Noto sans KR', sans-serif;
+  font-family: $font-main;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-  font-family: 'Noto sans KR', sans-serif;
+  font-family: $font-main;
+  font-size: $font-size-16;
 }
 
 body {
-  font-family: 'Noto sans KR', sans-serif;
+  font-family: $font-main;
+  color: $primary;
 }
 
 h1 {
