@@ -1,0 +1,90 @@
+%btn-base {
+  display: inline-flex;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+// Note: Button styles & state
+.btn-fill-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $blue-dark;
+  }
+
+  &:disabled:hover {
+    background-color: $blue;
+  }
+}
+
+.btn-fill-secondary {
+  @extend %btn-base;
+  color: $primary;
+  background-color: $border;
+
+  &:hover {
+    background-color: $tertiary;
+  }
+
+  &:disabled:hover {
+    background-color: $border;
+  }
+}
+
+.btn-outlined {
+  @extend %btn-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+
+  &:hover {
+    background-color: $blue-light;
+  }
+
+  &:disabled:hover {
+    background-color: $white;
+  }
+}
+
+.btn-ghost {
+  @extend %btn-base;
+  color: $primary;
+  background-color: transparent;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  &:disabled {
+    color: $primary;
+  }
+}
+
+// Note: Button size
+.btn-32 {
+  height: 32px;
+  @include text-style(14);
+}
+
+.btn-40 {
+  height: 40px;
+  @include text-style(16);
+}
+
+.btn-48 {
+  height: 48px;
+  @include text-style(16);
+}
+
+.btn-55 {
+  height: 55px;
+  @include text-style(18);
+}
