@@ -30,14 +30,6 @@
       .gnb-button-group {
         @include flexbox(flex-end);
 
-        .gnb-icon-button {
-          @include flexbox;
-          width: 32px;
-          height: 32px;
-          font-size: 24px;
-          color: $secondary;
-        }
-
         .gnb-search-button {
           margin-right: 4px;
         }
@@ -86,14 +78,6 @@
   }
 
   @include responsive(Desktop) {
-    .gnb-left {
-      .logo {
-        img {
-          height: 24px;
-        }
-      }
-    }
-
     .gnb-right {
       .input-group {
         width: 264px;
