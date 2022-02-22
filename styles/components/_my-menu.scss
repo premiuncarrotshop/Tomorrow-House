@@ -42,8 +42,12 @@
       height: 0;
       border-top: $tooltip-size solid transparent;
       border-right: 10px solid transparent;
-      border-bottom: $tooltip-size solid $border;
+      border-bottom: $tooltip-size solid transparent;
       border-left: 10px solid transparent;
+    }
+
+    &::before {
+      border-bottom-color: $border;
     }
 
     &::after {
@@ -53,7 +57,7 @@
 
     .my-menu-list {
       width: 200px;
-      padding: 0 8px;
+      padding: 8px;
       border: 1px solid $border;
       border-radius: 4px;
 
