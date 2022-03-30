@@ -1,0 +1,86 @@
+.sidebar-nav {
+  .drawer-menu {
+    &.is-active {
+      .drawer-menu-button {
+        color: $blue;
+      }
+    }
+
+    &.is-open {
+      .drawer-menu-button {
+        .ic-chevron {
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      .drawer-menu-content {
+        max-height: 332px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .drawer-menu-button {
+      @include text-style(18, $primary);
+      @include flexbox(flex-start);
+      position: relative;
+      width: 100%;
+      height: 54px;
+      padding: 0 8px;
+      font-weight: 700;
+      transition: color 200ms ease-in-out;
+
+      &.is-active {
+        color: $blue;
+      }
+
+      i {
+        &.ic-store {
+          font-size: 24px;
+          color: $primary;
+        }
+
+        &.ic-chevron {
+          @include position-center-y;
+          right: 8px;
+          font-size: 16px;
+          color: $primary;
+          transition: transform 200ms ease-in-out;
+        }
+
+        &:first-child {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .drawer-menu-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 200ms ease-in-out;
+
+      .drawer-menu-list {
+        .drawer-menu-item {
+          &.is-active {
+            a {
+              color: $blue;
+            }
+          }
+
+          a {
+            @include flexbox(flex-start);
+            @include text-style(14, $primary);
+            font-weight: 700;
+            width: 100%;
+            height: 36px;
+            padding: 0 12px;
+
+            .ic-new {
+              font-size: 16px;
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
