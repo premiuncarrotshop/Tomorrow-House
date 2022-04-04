@@ -10,18 +10,17 @@
       @include text-style(13, $secondary);
       font-weight: 400;
     }
-
-    .title {
-    }
-
-    button {
-    }
   }
 
   .search-history-content {
     .search-history-list {
       .search-history-item {
         position: relative;
+        border-radius: 2px;
+
+        &:hover {
+          background-color: $border;
+        }
 
         .word-button {
           @include flexbox(flex-start);
@@ -41,6 +40,10 @@
           height: $delete-button-size;
           font-size: 16px;
           color: $tertiary;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }
