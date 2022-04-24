@@ -1,7 +1,6 @@
 .lnb {
   width: 100%;
   overflow-x: auto;
-  border-bottom: 1px solid $border;
 
   &::-webkit-scrollbar {
     display: none;
@@ -11,6 +10,8 @@
     @include inline-flexbox(flex-start);
     position: relative;
     left: -8px;
+    height: 40px;
+    border-bottom: 1px solid $border;
     white-space: nowrap;
 
     .lnb-item {
@@ -20,6 +21,7 @@
         font-weight: 700;
         height: 40px;
         padding: 0 8px;
+        border-bottom: 2px solid transparent;
 
         .ic-new {
           color: $red;
@@ -29,7 +31,7 @@
       &.is-active {
         a {
           color: $blue;
-          border-bottom: 2px solid $blue;
+          border-bottom-color: $blue;
         }
       }
     }
