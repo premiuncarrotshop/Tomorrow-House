@@ -36,4 +36,26 @@
       }
     }
   }
+
+  @include responsive(Tablet) {
+    height: 50px;
+    border-bottom: 1px solid $border;
+    overflow-x: visible;
+    .lnb-list {
+      height: auto;
+      padding: 0;
+      margin-left: 0;
+      border-bottom: 0;
+      .lnb-item {
+        a {
+          @include text-style(14);
+          height: 50px;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
 }
