@@ -41,13 +41,59 @@
         }
 
         &:not(:last-child) {
-          margin-right: 8px;
+          margin-right: 4px;
         }
 
         &.tns-nav-active {
           button {
             transform: scale(1.333333);
             opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(Tablet) {
+    padding-right: 30px;
+
+    .product-carousel-slider {
+      margin: 0 0 8px 0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .product-carousel-thumbnail {
+      position: static;
+      transform: none;
+
+      .thumbnail-list {
+        justify-content: flex-start;
+
+        .thumbnail-item {
+          button {
+            @include flexbox;
+            width: 56px;
+            height: 56px;
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 1;
+          }
+
+          img {
+            display: block;
+            width: 56px;
+          }
+
+          &.tns-nav-active {
+            button {
+              transform: none;
+              border: 2px solid $blue;
+            }
+          }
+
+          &:not(:last-child) {
+            margin-right: 8px;
           }
         }
       }
