@@ -1,5 +1,11 @@
 .product-carousel {
+  $grid-margin: 15px;
+
+  position: relative;
+
   .product-carousel-slider {
+    margin: 0 -#{$grid-margin};
+
     .slider-list {
       .slider-item {
         img {
@@ -12,8 +18,38 @@
   }
 
   .product-carousel-thumbnail {
+    @include position-center-x;
+    bottom: 16px;
+
     .thumbnail-list {
+      @include flexbox;
+
       .thumbnail-item {
+        @include flexbox;
+
+        button {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $white;
+          opacity: 0.7;
+          transition: transform 100ms ease-in-out, opacity 100ms ease-in-out;
+        }
+
+        img {
+          display: none;
+        }
+
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+
+        &.tns-nav-active {
+          button {
+            transform: scale(1.333333);
+            opacity: 1;
+          }
+        }
       }
     }
   }
