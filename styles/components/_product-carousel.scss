@@ -71,6 +71,9 @@
         justify-content: flex-start;
 
         .thumbnail-item {
+          margin-right: 0;
+          margin-bottom: 8px;
+
           button {
             @include flexbox;
             width: 56px;
@@ -95,6 +98,28 @@
           &:not(:last-child) {
             margin-right: 8px;
           }
+        }
+      }
+    }
+  }
+
+  @include responsive(Desktop) {
+    @include flexbox(flex-end, flex-start);
+    flex-direction: row-reverse;
+
+    .product-carousel-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+
+      .thumbnail-item {
+        .button,
+        img {
+          width: 75px;
+          height: 75px;
         }
       }
     }
