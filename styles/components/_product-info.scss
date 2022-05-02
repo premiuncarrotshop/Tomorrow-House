@@ -24,16 +24,12 @@
 
       .star-rating-13 {
         margin-right: 8px;
+        color: $blue;
       }
 
       p {
-        strong {
-          @include text-style(13, $blue);
-          font-weight: 700;
-        }
-
-        span {
-        }
+        @include text-style(13, $blue);
+        font-weight: 700;
       }
     }
   }
@@ -96,6 +92,74 @@
       display: block;
       font-weight: 400;
       margin-bottom: 2px;
+    }
+  }
+
+  @include responsive(Tablet) {
+    padding: 0;
+
+    .product-info-header {
+      .info-brand {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .info-title {
+        @include text-style(24);
+        margin-bottom: 8px;
+      }
+
+      .info-review {
+        .star-rating-13 {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .product-info-price {
+      .info-price-wrapper {
+        @include flexbox(flex-start, flex-end);
+        margin-bottom: 12px;
+
+        .discount-rate {
+          align-items: flex-end;
+          margin-right: 16px;
+          color: $blue;
+
+          .rate {
+            font-size: 44px;
+            line-height: 36px;
+          }
+
+          .percent {
+            line-height: 20px;
+          }
+        }
+
+        .info-price {
+          .info-sale-price {
+            margin-bottom: 0;
+
+            .price-32 {
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+
+      .info-point {
+        margin-bottom: 20px;
+      }
+    }
+
+    .product-info-delivery {
+      padding-top: 16px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $border;
+
+      span {
+        margin-bottom: 8px;
+      }
     }
   }
 }
