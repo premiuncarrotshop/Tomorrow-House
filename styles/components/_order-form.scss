@@ -5,7 +5,17 @@
   .order-inputs {
     margin-bottom: 20px;
 
-    .select-input {
+    .select-group {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .order-checkout {
+    .checkout-item {
       margin-bottom: 8px;
 
       &:last-child {
