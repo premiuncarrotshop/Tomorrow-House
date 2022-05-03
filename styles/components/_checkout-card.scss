@@ -3,6 +3,7 @@
   padding: 8px 10px 8px 12px;
   border-radius: 4px;
   background-color: $background;
+  margin-bottom: 20px;
 
   .checkout-header {
     margin-bottom: 8px;
@@ -22,6 +23,11 @@
       height: 20px;
       font-size: 20px;
       color: $secondary;
+
+      &:active,
+      &:hover {
+        opacity: 0.4;
+      }
     }
   }
 
@@ -31,6 +37,16 @@
     .checkout-select {
       position: relative;
       display: inline-block;
+
+      &:hover {
+        select {
+          border-color: $tertiary;
+        }
+
+        i {
+          color: $secondary;
+        }
+      }
 
       select {
         @include text-style(14, $primary);
@@ -55,8 +71,10 @@
   }
 
   @include responsive(Desktop) {
-    .checkout-title {
-      @include text-style(16);
+    .checkout-header {
+      .checkout-title {
+        @include text-style(16);
+      }
     }
   }
 }
