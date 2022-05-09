@@ -46,13 +46,17 @@
     background-color: $background;
     border-bottom: 0;
 
-    .product-tab-item {
-      button {
-        @include text-style(16);
-        height: 54px;
+    .product-tab-list {
+      margin: 0;
 
-        .badge {
-          margin-left: 8px;
+      .product-tab-item {
+        button {
+          @include text-style(16);
+          height: 54px;
+
+          .badge {
+            margin-left: 8px;
+          }
         }
       }
     }
