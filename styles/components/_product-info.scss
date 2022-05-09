@@ -97,6 +97,7 @@
 
   @include responsive(Tablet) {
     padding: 0;
+    margin-bottom: 40px;
 
     .product-info-header {
       .info-brand {
