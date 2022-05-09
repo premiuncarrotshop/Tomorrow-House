@@ -1,0 +1,37 @@
+.product-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+
+  tr {
+    @include text-style(12, $primary);
+    border-bottom: 1px solid $border;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th,
+  td {
+    padding: 12px;
+  }
+
+  th {
+    width: 100px + 12px;
+    font-weight: 400;
+    color: $secondary;
+  }
+
+  td {
+    padding-left: 0;
+  }
+
+  @include responsive(Tablet) {
+    tr {
+      @include text-style(14);
+    }
+
+    th {
+      width: 140px + (12px * 2);
+    }
+  }
+}
