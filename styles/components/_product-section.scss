@@ -1,0 +1,22 @@
+.product-section {
+  padding-bottom: 20px;
+
+  .product-section-divider {
+    width: 100%;
+    height: 8px;
+    background-color: $border;
+    margin: 0 -15px;
+  }
+
+  @include responsive(Tablet) {
+    width: 100%;
+    max-width: 692px;
+    padding-bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include responsive(Desktop) {
+    margin-left: 0;
+  }
+}
